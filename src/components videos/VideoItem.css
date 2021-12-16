@@ -1,0 +1,11 @@
+.video-item {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.video-item.item img {
+    object-fit: cover;
+    width: 180px;
+    height: 100px;
+}

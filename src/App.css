@@ -1,0 +1,18 @@
+.container {
+    margin: 0 2rem;
+
+}
+
+.container.accordion {
+    display: flex; 
+    justify-content: center;
+}
+
+.menu {
+    justify-content: center;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
