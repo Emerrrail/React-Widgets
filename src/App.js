@@ -46,7 +46,9 @@ const options = [
 
 
 
-export default () => {
+
+
+const App = () => {
     //Dropdown
     const [selected, setSelected] = useState(options[0]);  //default value就放進options的第一項
 
@@ -94,3 +96,5 @@ export default () => {
         </div>
     );
 };
+
+export default App;

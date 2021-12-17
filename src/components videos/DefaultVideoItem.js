@@ -24,7 +24,7 @@ const DefaultVideoItem = ({ onVideoSelect, video, doCategorySelect }) => {
                             </div>
                         </div>
                     </div> */}
-            <img width="100%" src={video.snippet.thumbnails.medium.url} ait={video.snippet.title} />
+            <img width="100%" src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
             {/* </div> */}
             <div className="content" style={{ marginTop: "1rem" }}>
                 <h4 className="header">

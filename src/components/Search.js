@@ -4,10 +4,11 @@ import axios from "axios";
 const Search = () => {
     const [term, setTerm] = useState('programming');
     const [results, setResults] = useState([]);
+    const URL = "https://en.wikipedia.org/w/api.php";
 
     useEffect(() => {
         const search = async () => {
-            const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
+            const { data } = await axios.get(URL, {
                 params: {
                     action: 'query',
                     list: 'search',
@@ -33,7 +34,7 @@ const Search = () => {
             }
         }
 
-    }, [term]);
+    }, [term, results.length]);
 
     const renderedResults = results.map((result) => {
         return (

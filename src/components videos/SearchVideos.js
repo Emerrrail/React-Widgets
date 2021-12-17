@@ -63,8 +63,6 @@ const SearchVideos = () => {   //1. 把function傳進SearchBar
         window.matchMedia("(min-width: 1200px)").addEventListener(
             'change', e => {
                 setMatches(e.matches);
-                console.log("e.matches", e.matches);
-                console.log("e", e);
             }
         );
 
