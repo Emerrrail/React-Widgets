@@ -4,6 +4,9 @@
 
 It's an app combining four simple widgets, which allow users to search terms on Wikipedia, pictures on Unsplash, videos on Youtube, and to make good use of translator powered by Google.
 
+### [Production Deployment](https://react-widgets-xi-black.vercel.app/ "Title")
+
+
 ### Language
 1. HTML
 2. CSS
@@ -23,4 +26,4 @@ It's an app combining four simple widgets, which allow users to search terms on 
 1. Wikipedia Search API
 2. Unsplash Search API
 3. YouTube Search and Videos API
-4. Google Translate API
+4. Google Translation API

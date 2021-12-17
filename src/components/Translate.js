@@ -18,7 +18,7 @@ const Translate = () => {
             const { data } = await axios.get('https://translation.googleapis.com/language/translate/v2/languages', {
                 params: {
                     target: 'en',
-                    key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
+                    key: 'AIzaSyC-gIK3Okukol5oUa2GG7SUepWNZ6u0Gf0'
                 }
             });
             const tempResult = data.data.languages;

@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import PopularVideosList from "./PopularVideosList";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import Loader from "./Loader";
 
 const SearchVideos = () => {   //1. 把function傳進SearchBar
     const [videos, setVideos] = useState([]); //預設是空的array，之後才可以填進array data
@@ -12,6 +13,7 @@ const SearchVideos = () => {   //1. 把function傳進SearchBar
     const [musicVideos, setMusicVideos] = useState([]);
     const [petsVideos, setPetsVideos] = useState([]);
     const [clearDefault, setClearDefault] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const getMusicVideos = async () => {
@@ -33,6 +35,7 @@ const SearchVideos = () => {   //1. 把function傳進SearchBar
             });
 
             setMusicVideos(changeVideoId);
+            setLoading(true);
         };
         getMusicVideos();
 
@@ -57,6 +60,7 @@ const SearchVideos = () => {   //1. 把function傳進SearchBar
             });
 
             setPetsVideos(changeVideoId);
+            setLoading(false);
         };
         getPetsVideos();
 
@@ -80,6 +84,7 @@ const SearchVideos = () => {   //1. 把function傳進SearchBar
         setVideos(response.data.items);
         setSelectedVideo(null);
         setClearDefault(true);
+
     };
 
     const onVideoSelect = (video) => {
@@ -132,14 +137,15 @@ const SearchVideos = () => {   //1. 把function傳進SearchBar
 
             </div>
             <div className="ui">
-                {(clearDefault === false) ?
+                {loading ? <Loader /> : ((clearDefault === false) ?
                     <PopularVideosList
                         onCategorySelect={onCategorySelect}
                         onVideoSelect={onVideoSelect}
                         musicVideos={musicVideos}
                         petsVideos={petsVideos}
                     />
-                    : null}
+                    : null)}
+                
             </div>
         </div>
     );

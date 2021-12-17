@@ -20,7 +20,7 @@ const items = [
     },
     {
         title: 'Search Videos',
-        content: 'Searching for videos on Youtube and Playing them with just one click'
+        content: 'Searching for videos on YouTube and Playing them with just one click'
     },
     {
         title: 'Translate',
